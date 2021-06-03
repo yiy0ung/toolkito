@@ -1,0 +1,34 @@
+{
+  "name": "tsul",
+  "version": "0.0.1",
+  "author": {
+    "name": "Glen Lee",
+    "email": "wlsdud2194@gmail.com",
+    "url": "https://github.com/wlsdud2194"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/node": "^15.9.0",
+    "jest": "^27.0.4",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "license": "MIT",
+  "description": "TypeScript Utility Library",
+  "homepage": "https://github.com/wlsdud2194/tsul#readme",
+  "bugs": {
+    "url": "https://github.com/wlsdud2194/tsul/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://wlsdud2194@github.com/wlsdud2194/tsul.git"
+  },
+  "keywords": [
+    "tsul",
+    "typescript",
+    "utility library"
+  ]
+}
