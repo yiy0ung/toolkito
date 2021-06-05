@@ -6,8 +6,12 @@
     "email": "wlsdud2194@gmail.com",
     "url": "https://github.com/wlsdud2194"
   },
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.js",
   "scripts": {
+    "build": "npm run clean && tsc",
+    "deploy": "npm publish",
+    "clean": "ts-node ./scripts/clean.ts",
     "test": "jest"
   },
   "devDependencies": {
