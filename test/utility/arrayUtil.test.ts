@@ -1,7 +1,7 @@
 import { normalize } from '../../src/utility/arrayUtil';
 import { testArr } from '../__data__/array';
 
-describe('test utilty array method', () => {
+describe('test utility array method', () => {
   test('asyncForEach', () => {
     const expectedVal = {
       '1': {
