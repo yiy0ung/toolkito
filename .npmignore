@@ -1,2 +1,5 @@
 # exclude test code
 test/
+
+src/
+tsconfig.json

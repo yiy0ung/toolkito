@@ -1,14 +1,15 @@
 {
   "name": "tsul",
   "description": "TypeScript Utility Library",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "author": {
     "name": "Glen Lee",
     "email": "wlsdud2194@gmail.com",
     "url": "https://github.com/wlsdud2194"
   },
-  "main": "index.js",
-  "types": "index.d.js",
+  "main": "build/index.js",
+  "typings": "build/index.d.js",
+  "files": ["build/**/*"],
   "scripts": {
     "clean": "ts-node ./scripts/clean.ts",
     "build": "npm run clean && tsc",
