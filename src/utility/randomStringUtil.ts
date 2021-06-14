@@ -1,15 +1,15 @@
 import { randint } from "../algorithm";
 
 /**
- * 지정한 아스키코드 사이의 랜덤 문자열 생성
+ * Generate Random String Between Specified Ascii Codes
  * 
- * @param length 문자열 길이
- * @param start 아스키코드 처음
- * @param end 아스키코드 마지막
+ * @param length string length
+ * @param start ascii code start num
+ * @param end ascii code end num
  * 
- * @returns 지정한 아스키코드 사이의 랜덤 문자열
+ * @returns Random Specified Ascii Codes String Between [start, end]
  */
-function random(length: number, start: number, end: number) {
+export function random(length: number, start: number, end: number) {
     let text = '';
     for (let i = 0; i < length; i++) {
         text += String.fromCharCode(randint(start, end));
@@ -19,13 +19,13 @@ function random(length: number, start: number, end: number) {
 }
 
 /**
- * 영어 대소문자로 이루어진 랜덤 문자열 생성
+ * Generate Random English String
  * 
- * @param length 문자열 길이
+ * @param length string length
  * 
- * @returns 영어 대소문자로 이루어진 랜덤 문자열
+ * @returns Random English String
  */
-function randomAlphabetic(length: number) {
+export function randomAlphabetic(length: number) {
     const char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     let text = '';
     for (let i = 0; i < length; i++) {
@@ -36,13 +36,13 @@ function randomAlphabetic(length: number) {
 }
 
 /**
- * 숫자로 이루어진 랜덤 문자열 생성
+ * Generate Random Numbers String
  * 
- * @param length 문자열 길이
+ * @param length string length
  * 
- * @returns 숫자로 이루어진 랜덤 문자열
+ * @returns Random Numbers String
  */
-function randomNumberic(length: number) {
+export function randomNumberic(length: number) {
     let text = '';
     for (let i = 0; i < length; i++) {
         text += String.fromCharCode(randint(48, 57));
@@ -52,13 +52,13 @@ function randomNumberic(length: number) {
 }
 
 /**
- * 영어 대소문자 및 숫자로 이루어진 랜덤 문자열 생성
+ * Generate Random English And Numbers String
  * 
- * @param length 문자열 길이
+ * @param length string length
  * 
- * @returns 영어 대소문자 및 숫자로 이루어진 랜덤 문자열
+ * @returns Random English And Numbers String
  */
-function randomAlphanumeric(length: number) {
+export function randomAlphanumeric(length: number) {
     const char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789';
     let text = '';
     for (let i = 0; i < length; i++) {
@@ -69,13 +69,13 @@ function randomAlphanumeric(length: number) {
 }
 
 /**
- * 랜덤한 아스키코드(33, 125)로 생성한 문자열 생성
+ * Generate Random Ascii(33, 125) codes String
  * 
- * @param length 문자열 길이
+ * @param length string length
  * 
- * @returns 랜덤한 아스키코드(33, 125)로 생성한 문자열
+ * @returns Random Ascii(33, 125) codes String
  */
-function randomAscii(length: number) {
+export function randomAscii(length: number) {
     let text = '';
     for (let i = 0; i < length; i++) {
         text += String.fromCharCode(randint(33, 125));
