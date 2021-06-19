@@ -1,5 +1,6 @@
 # exclude test code
 test/
+coverage/
 
 src/
 tsconfig.json
