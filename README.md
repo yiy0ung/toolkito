@@ -1,11 +1,17 @@
-# TypeScript Utilty Library
+<!-- Logo -->
+<p align="center">
+  <img src="docs/logo.png" alt='logo' />
+</p>
 
-<a href="https://www.npmjs.com/~devjin2194" target="_blank"><img src="https://img.shields.io/npm/v/tsul?color=%230b7cbc" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~devjin2194" target="_blank"><img src="https://img.shields.io/npm/l/tsul" alt="Package License" /></a>
+<p align="center">
+  <a href="https://github.com/wlsdud2194/tsul">tsul</a> is an open-source project that provides frequently used and useful methods for development. (beta)
+</p>
 
-## Description
-
-[tsul](https://github.com/wlsdud2194/tsul) is an open-source project that provides frequently used and useful methods for development. (beta)
+<!-- badge -->
+<p align="center">
+  <a href="https://www.npmjs.com/~devjin2194" target="_blank"><img src="https://img.shields.io/npm/v/tsul?color=%230b7cbc" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/~devjin2194" target="_blank"><img src="https://img.shields.io/npm/l/tsul.svg" alt="Package License" /></a>
+</p>
 
 ## Installation
 ```
