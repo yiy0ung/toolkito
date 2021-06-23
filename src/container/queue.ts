@@ -1,10 +1,19 @@
 import { Container } from "./internal/Container";
 
-export class Queue extends Container {
-  public list: number[] = [];
+export class Queue<T> extends Container {
+  private list: T[];
+
+  constructor() {
+    super();
+    this.list = [];
+  }
+
+  public get() {
+    return this.list;
+  }
 
   public push() {
-
+    
   }
 
   public pop() {
