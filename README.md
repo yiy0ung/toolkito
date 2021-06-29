@@ -28,7 +28,7 @@ yarn add tsul
   - [Async Array Method](src/algorithm/random.ts)
   - [Async Thread Method](src/algorithm/thread.ts)
 - utility
-  - [Array Utility](src/utility/arrayUtil.ts)
+  - [Collection Utility](src/utility/collectionUtil.ts)
   - [File Utility](src/utility/fileUtil.ts)
   - [Random String Utility](src/utility/randomStringUtil.ts)
 
