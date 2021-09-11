@@ -1,4 +1,4 @@
-import * as tsul from './root';
+import * as toolkito from './root';
 
 export * from './root';
-export default tsul;
+export default toolkito;

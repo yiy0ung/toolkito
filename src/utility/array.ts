@@ -1,8 +1,27 @@
 //================================================================
 /**
- * Array Async Method
+ * Array Utility Method
  */
 //================================================================
+
+/**
+ * 
+ * @param arr 
+ * @param selector 
+ * @returns 
+ */
+export function normalize<T>(
+  arr: T[], 
+  selector: (item: T) => string | number = (item: any) => item.id
+) {
+  const normalizeObj: { [key: string]: T } = {};
+
+  arr.forEach((data) => {
+    normalizeObj[selector(data)] = data;
+  });
+
+  return normalizeObj;
+}
 
 /**
  * @param array
@@ -10,7 +29,7 @@
  */
  export async function asyncForEach<T>(
   array: T[], 
-  callback: (value: T, idx: number) => Promise<void>,
+  callback: (value: T, idx: number) => Promise<void> | void,
 ): Promise<void> {
   for (let i = 0; i < array.length; i++) {
     await callback(array[i], i);
@@ -24,7 +43,7 @@
  */
 export async function asyncMap<T, R>(
   array: T[], 
-  callback: (value: T, idx: number) => Promise<R>
+  callback: (value: T, idx: number) => Promise<R> | R,
 ) {
   const resultArr: R[] = new Array(array.length || 0);
 
@@ -35,10 +54,15 @@ export async function asyncMap<T, R>(
   return resultArr;
 }
 
-
+/**
+ * 
+ * @param array 
+ * @param callback 
+ * @returns 
+ */
 export async function asyncFilter<T>(
   array: T[],
-  callback: (value: T, idx: number) => Promise<boolean>
+  callback: (value: T, idx: number) => Promise<boolean> | boolean
 ) {
   let c = 0
   const resultArr: T[] = [];

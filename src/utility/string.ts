@@ -1,4 +1,23 @@
-import { randint } from "../algorithm";
+import { randint } from "./number";
+
+
+/**
+ * @Incompletion_Method
+ * 
+ * @param phoneStr 
+ * @returns 
+ */
+function toFormatPhoneNumber(phoneStr: string) {
+    const value = phoneStr.replace(/(\d)\D+|^[^\d+]/g, '$1').slice(0, 11);
+    let phoneNumber = value;
+  
+    if (value.length > 3 && value.length <= 8) phoneNumber = `${value.slice(0, 3)}-${value.slice(3)}`;
+    if (value.length === 9) phoneNumber = `${value.slice(0, 2)}-${value.slice(2, 5)}-${value.slice(5)}`;
+    if (value.length === 10) phoneNumber = `${value.slice(0, 3)}-${value.slice(3, 6)}-${value.slice(6)}`;
+    if (value.length === 11) phoneNumber = `${value.slice(0, 3)}-${value.slice(3, 7)}-${value.slice(7)}`;
+  
+    return phoneNumber.replace(/\+/g, '');
+}
 
 /**
  * Generate Random String Between Specified Ascii Codes

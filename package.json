@@ -1,46 +1,54 @@
 {
-  "name": "tsul",
+  "name": "toolkito",
   "description": "TypeScript Utility Library",
-  "version": "0.0.12",
+  "version": "0.0.15",
   "author": {
-    "name": "Glen Lee",
+    "name": "Jinyoung Lee",
     "email": "wlsdud2194@gmail.com",
     "url": "https://github.com/wlsdud2194"
   },
   "main": "build/index.js",
-  "typings": "build/index.d.js",
+  "types": "build/index.d.ts",
+  "common": "build/index.cjs.js",
+  "module": "build/index.esm.js",
   "scripts": {
-    "clean": "ts-node ./scripts/clean.ts",
-    "coverage": "jest --coverage && coveralls ./coverage/lcov.info",
-    "build": "npm run clean && tsc",
-    "deploy": "npm run build && npm publish ./build",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch",
+    "build": "rimraf ./build && rollup -c",
+    "deploy": "npm run build && npm publish .",
     "test": "jest",
-    "test:cover": "jest --coverage"
+    "test:cover": "jest --coverage",
+    "coverage": "jest --coverage && coveralls ./coverage/lcov.info"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-typescript": "^7.13.0",
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^27.0.1",
     "@types/node": "^15.9.0",
     "babel-jest": "^27.0.2",
     "coveralls": "^3.1.0",
     "jest": "^27.0.4",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-typescript2": "^0.30.0",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.2"
   },
   "license": "MIT",
-  "homepage": "https://github.com/wlsdud2194/tsul#readme",
+  "homepage": "https://github.com/wlsdud2194/toolkito#readme",
   "bugs": {
-    "url": "https://github.com/wlsdud2194/tsul/issues"
+    "url": "https://github.com/wlsdud2194/toolkito/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://wlsdud2194@github.com/wlsdud2194/tsul.git"
+    "url": "git+https://wlsdud2194@github.com/wlsdud2194/toolkito.git"
   },
   "keywords": [
-    "tsul",
+    "toolkito",
     "typescript",
-    "utility library"
+    "utility",
+    "tool",
+    "kit"
   ]
 }
