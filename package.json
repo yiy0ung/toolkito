@@ -1,16 +1,15 @@
 {
   "name": "toolkito",
   "description": "TypeScript Utility Library",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "author": {
     "name": "Jinyoung Lee",
     "email": "wlsdud2194@gmail.com",
     "url": "https://github.com/wlsdud2194"
   },
   "main": "build/index.js",
-  "typing": "build/index.d.ts",
-  "common": "build/index.cjs.js",
   "module": "build/index.esm.js",
+  "typing": "build/index.d.ts",
   "scripts": {
     "type-check": "tsc",
     "type-check:watch": "tsc --watch",
