@@ -5,32 +5,30 @@
 //================================================================
 
 /**
- * 
- * @param ms 
+ *
+ * @param ms
  */
 export function sleep(ms: number): Promise<void> {
   return new Promise((resolve, _) => {
     setTimeout(() => {
       resolve();
     }, ms);
-  })
+  });
 }
 
 /**
- * 
- * @param closure 
- * @param delay 
+ *
+ * @param closure
+ * @param delay
  */
-export function debounce(closure: Function, delay: number) {
+export function debounce<C extends (...args: any[]) => any>(closure: C, delay: number) {
   let timer: NodeJS.Timeout | null = null;
 
-  if (timer) {
-    clearTimeout(timer);
-  }
+  return (...args: Parameters<C>) => {
+    if (timer) clearTimeout(timer);
 
-  const newTimer = setTimeout(() => {
-    closure();
-  }, delay);
-
-  timer = newTimer;
+    timer = setTimeout(() => {
+      closure.apply(null, args);
+    }, delay);
+  };
 }
